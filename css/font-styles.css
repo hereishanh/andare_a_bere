@@ -1,0 +1,50 @@
+/* Font Face Declarations for FZ Poppins */
+@font-face {
+    font-family: 'FZ Poppins';
+    src: url('./font/FzPoppins/FzPoppins-Light.woff2') format('woff2'),
+         url('./font/FzPoppins/FzPoppins-Light.woff') format('woff'),
+         url('./font/FzPoppins/FzPoppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FZ Poppins';
+    src: url('./font/FzPoppins/FzPoppins-Regular.woff2') format('woff2'),
+         url('./font/FzPoppins/FzPoppins-Regular.woff') format('woff'),
+         url('./font/FzPoppins/FzPoppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FZ Poppins';
+    src: url('./font/FzPoppins/FzPoppins-Medium.woff2') format('woff2'),
+         url('./font/FzPoppins/FzPoppins-Medium.woff') format('woff'),
+         url('./font/FzPoppins/FzPoppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FZ Poppins';
+    src: url('./font/FzPoppins/FzPoppins-SemiBold.woff2') format('woff2'),
+         url('./font/FzPoppins/FzPoppins-SemiBold.woff') format('woff'),
+         url('./font/FzPoppins/FzPoppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FZ Poppins';
+    src: url('./font/FzPoppins/FzPoppins-Bold.woff2') format('woff2'),
+         url('./font/FzPoppins/FzPoppins-Bold.woff') format('woff'),
+         url('./font/FzPoppins/FzPoppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

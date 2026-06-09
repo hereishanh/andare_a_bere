@@ -1,0 +1,375 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'FZ Poppins', sans-serif; /* Updated to FZ Poppins */
+    background-color: #121315;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.content-placeholder {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: #121315;
+}
+
+/* Section Common Styles */
+.page-section {
+    position: relative;
+    width: 100%;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.section-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.section-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.section-background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 0px;
+}
+
+.centered-text {
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+/* First Section - Black Background */
+.background-black {
+    background-color: #121315;
+}
+
+.background-black .section-background-overlay {
+    background-color: #121315;
+}
+
+/* Second Section - Light Background with Image */
+
+
+.background-light {
+    color: #000; /* Text is black on light background */
+}
+
+/* Fluid Engine Grid */
+.fluid-engine {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .fluid-engine {
+        grid-template-columns: repeat(24, 1fr);
+    }
+}
+
+/* Logo Block */
+.logo-block {
+    grid-column: 2 / 10;
+    grid-row: 1 / 9;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-logo-block {
+    grid-column: 4 / 8;
+    grid-row: 10 / 12;
+    text-align: center;
+}
+
+.contact-info-block {
+    grid-column: 2 / 10;
+    grid-row: 12 / 21;
+    margin-top: 30px;
+}
+
+.footer-image-container, .small-logo-container {
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.footer-image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.small-logo-container {
+    overflow: visible !important; /* Force visible */
+    margin: 0 auto;
+    width: 100%; /* Sửa lại kích thước container */
+    max-width: 100%;
+    position: relative;
+    display: block;
+    min-height: 50px; /* Đảm bảo có chiều cao tối thiểu */
+    min-width: 50px; /* Đảm bảo có chiều rộng tối thiểu */
+    background-color: transparent; /* Đảm bảo không có background che logo */
+}
+
+.small-logo-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 5;
+    min-height: 40px; /* Đảm bảo có kích thước tối thiểu */
+    min-width: 40px; /* Đảm bảo có kích thước tối thiểu */
+    opacity: 1 !important; /* Đảm bảo không bị ẩn */
+}
+
+/* Work With Us Block */
+.work-with-us-block {
+    grid-column: 2 / 10;
+    grid-row: 3 / 9;
+}
+
+.social-title-block {
+    grid-column: 2 / 10;
+    grid-row: 10 / 12;
+}
+
+.social-icons-block {
+    grid-column: 2 / 10;
+    grid-row: 12 / 14;
+}
+
+/* Social Icons */
+.social-icons-wrapper {
+    text-align: center;
+}
+
+.social-icons-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #121315;
+    border-radius: 50%;
+    color: #000;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #000;
+    color: #fff;
+    transform: translateY(-3px);
+}
+/* Move abbcrew.png down to align with honey.jpg */
+#footer-image-1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: relative;
+    top: 80px; /* Adjust this value as needed to align properly */
+}
+
+/* Or adjust the container */
+.fe-block.logo-block {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Make sure the image container takes full height */
+.footer-image-container {
+    height: 100%;
+}
+/* HTML Content Styling */
+.html-content {
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.html-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.html-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: #121315;
+}
+
+.background-black .html-content h2::after {
+    background-color: #fff;
+}
+
+.html-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.html-content strong {
+    font-weight: 600;
+}
+
+/* Copyright Section */
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #121315;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .logo-block {
+        grid-column: 16 / 24;
+        grid-row: 1 / 13;
+    }
+
+    .small-logo-block {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Thêm dòng này để căn giữa .small-logo-container */
+    }
+    
+
+    .contact-info-block {
+        grid-column: 4 / 10;
+        grid-row: 5 / 12;
+        margin-top: 30px;
+    }
+
+    .small-logo-container {
+        width: auto;
+        max-width: 180px;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Căn giữa ngang */
+        margin: 0 auto; /* Căn giữa khối theo chiều ngang */
+        position: relative;
+    }
+
+    .contact-info-block .html-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .work-with-us-block {
+        grid-column: 16 / 24;
+        grid-row: 2 / 8;
+    }
+
+    .social-title-block {
+        grid-column: 4 / 10;
+        grid-row: 2 / 3;
+    }
+
+    .social-icons-block {
+        grid-column: 4 / 10;
+        grid-row: 4 / 6;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-section {
+        padding: 60px 0;
+    }
+    
+    .html-content h2 {
+        font-size: 24px;
+    }
+    
+    .html-content p {
+        font-size: 14px;
+    }
+}
+
+    /* Custom styling for social icons with images */
+    .social-icon {
+        background-color: #121315; /* Keep original dark background */
+    }
+    
+    /* Image inside social icon */
+    .social-icon-image {
+        width: 50%; /* Make image take up 50% of circle size */
+        height: 50%;
+        object-fit: contain; /* Maintain aspect ratio */
+    }
+    
+    /* Ensure icon container and image move together */
+    .social-icon:hover .social-icon-image {
+        /* No color change, just move with the parent */
+        transform: none;
+    }
+
+    .copyright-block {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    
+    .copyright-text {
+        color: #121315;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .copyright-block {
+            bottom: 15px;
+        }
+        
+        .copyright-text {
+            font-size: 12px;
+        }
+    }

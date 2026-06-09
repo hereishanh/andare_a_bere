@@ -1,0 +1,424 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'FZ Poppins', sans-serif; /* Updated to FZ Poppins */
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+.content-placeholder {
+    height: 1500px;
+    padding-top: 00px;
+    text-align: center;
+}
+
+/* Header styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    background-color: #121315;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.header--scrolled {
+    background-color: #121315;
+}
+
+.header__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Header top row */
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.header--scrolled .header__top {
+    padding: 10px 0;
+}
+
+/* Header contact info - Updated as requested */
+.header__contact {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.header__contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__contact-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.header__contact-group:last-child {
+    margin-bottom: 0;
+}
+
+.header__contact-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+.header__contact-link {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.header__contact-link:hover {
+    color: #c8a97e;
+}
+
+/* Header logo */
+.header__logo {
+    text-align: center;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.header__logo-image {
+    max-height: 33px;
+    transition: all 0.3s ease;
+}
+
+.header--scrolled .header__logo-image {
+    max-height: 29px;
+}
+
+/* Header action buttons */
+.header__actions {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.header__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+}
+
+.header__btn:hover {
+    background-color: #c8a97e;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.header__btn:active {
+    background-color: #b69465;
+    transform: scale(0.95);
+}
+
+/* Button specific styles */
+.header__btn--reservation {
+    background-color: #121315;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.header__btn--login {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
+}
+
+.header__btn-icon-1 {
+    margin-right: 8px;
+    border-radius: 1%;
+    border-color: #fff;
+}
+.header__btn-text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 2;  /* Added this */
+    display: flex;   /* Added this */
+    align-items: center;  /* Added this */
+}
+
+
+/* Main navigation */
+.header__nav {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    border-top: 1.5px solid #d9d9d9;
+    border-bottom: 1.5px solid #d9d9d9;
+    text-align: center;
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.header--scrolled .header__nav {
+    padding: 10px 0;
+    border-color: rgba(255, 255, 255, 0.2); /* Maintain border opacity when scrolled */
+}
+
+.main-nav {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav__item {
+    margin: 0 15px;
+    position: relative;
+}
+
+.main-nav__link {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+}
+
+.main-nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #c8a97e;
+    transition: all 0.3s ease;
+}
+
+.main-nav__link:hover::after {
+    width: 100%;
+}
+
+/* Mobile menu toggle */
+.header__mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;  /* Changed from top: 35px */
+    transform: translateY(-50%);  /* Added to center vertically */
+    z-index: 1001;
+}
+
+.header__mobile-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Mobile navigation */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 380px;
+    height: 100vh;
+    background-color: #121315;
+    z-index: 2000;
+    padding: 30px;
+    transition: all 0.4s ease;
+    overflow-y: auto;
+}
+
+.mobile-nav.active {
+    right: 0;
+}
+
+.mobile-nav__close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.mobile-nav__logo {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.mobile-nav__logo img {
+    max-width: 180px;
+}
+
+.mobile-nav__menu {
+    margin-bottom: 40px;
+}
+
+.mobile-nav__item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav__link {
+    display: block;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.mobile-nav__contact {
+    margin-bottom: 30px;
+}
+
+.mobile-nav__contact-item {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav__contact-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+    margin-bottom: 5px;
+}
+
+.mobile-nav__contact-link {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mobile-nav__actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav__btn {
+    display: block;
+    text-align: center;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav__btn:hover {
+    background-color: #c8a97e;
+    color: #000;
+}
+
+.mobile-nav__btn--reservation {
+    background-color: #ece7e0;
+    color: #121315;
+}
+
+.mobile-nav__btn--reservation:hover {
+    background-color: #b69465;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 992px) {
+    .header__contact {
+        display: none;
+    }
+    
+    .header__logo {
+        text-align: left;
+    }
+    
+    .header__mobile-toggle {
+        display: block;
+    }
+    
+    .header__actions {
+        display: none;
+    }
+    
+    .header__nav {
+        display: none;
+    }
+    
+    .header__top {
+        padding: 20px 0;  /* Increased from 15px to 20px */
+        min-height: 80px; /* Added explicit height */
+        display: flex;
+        align-items: center;
+    }
+    
+    .header__logo-image {
+        max-height: 28px;  /* Slightly increased from 24px */
+    }
+
+    .header--scrolled .header__container {
+        border-bottom: 1.7px solid #d9d9d9;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header__logo-image {
+        max-height: 24px;
+    }
+    
+    .mobile-nav {
+        max-width: 100%;
+    }
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav__item {
+    margin-right: 50px; /* 50px spacing between items */
+}
+
+.main-nav__item:last-child {
+    margin-right: 0; /* Remove margin from last item */
+}

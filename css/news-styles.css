@@ -1,0 +1,262 @@
+/* Move abbcrew.png down to align with honey.jpg */
+#footer-image-1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: relative;
+    top: 80px; /* Adjust this value as needed to align properly */
+}
+
+/* Or adjust the container */
+.fe-block.logo-block {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Make sure the image container takes full height */
+.footer-image-container {
+    height: 100%;
+}
+/* Hero Image as Background (more responsive) */
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    height: 665px;
+    margin-top: 175px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+
+/* Ensure proper spacing between sections */
+.main-content {
+    margin-top: 50px; /* Add some space after the hero image */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+    .hero-image-container {
+        height: 500px;
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero-image-container {
+        height: 400px;
+        margin-top: 120px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-image-container {
+        height: 300px;
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-image-container {
+        height: 250px;
+        margin-top: 80px;
+    }
+}
+/* Container for the entire news section */
+.news-section {
+    position: relative;
+    min-height: 700px; /* Accommodate expanded content */
+    margin-top: 55px;
+  }
+  
+  /* Container for just the circular images */
+  .news-circles-container {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    position: relative;
+    z-index: 10; /* Keep circles above content */
+  }
+  
+  /* Individual circle wrapper */
+  .news-circle {
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Individual circular image styling */
+  .news-image-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #D9D9D9;
+    overflow: hidden;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  /* Image styling */
+  .news-image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Container for all text content */
+  .news-content-container {
+    position: relative;
+    width: 100%;
+    margin-top: 35px; /* Place below the expanded circles + margin */
+  }
+  
+  /* Base content styling (hidden by default) */
+  .news-content {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s;
+    padding: 0 10%; /* Add padding on sides */
+    box-sizing: border-box;
+    pointer-events: auto; /* Don't block mouse events */
+  }
+  
+  /* Content alignment styles */
+  .news-content-left {
+    text-align: left;
+  }
+  
+  .news-content-center {
+    text-align: center;
+  }
+  
+  .news-content-right {
+    text-align: right;
+  }
+  
+  /* Heading styles */
+  .news-heading {
+    font-family: 'FZ Poppins', sans-serif;
+    font-weight: 510;
+    font-size: 27px;
+    color: #D9D9D9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 30px 0;
+  }
+  
+  /* Description text styles */
+  .news-text {
+    font-size: 20px;
+    color: #D9D9D9;
+    font-weight: 100;
+    line-height: 1.5;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Hover effects for circles */
+  .news-circle:hover .news-image-circle {
+    width: 300px;
+    height: 300px;
+  }
+  
+  /* Show content when corresponding circle is hovered */
+  .news-circle[data-target="news-1"]:hover ~ .news-content-container #news-1,
+  .news-circle[data-target="news-2"]:hover ~ .news-content-container #news-2,
+  .news-circle[data-target="news-3"]:hover ~ .news-content-container #news-3 {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  /* First circle hover effects - push others right */
+  .news-circles-container:has(.news-circle:first-child:hover) .news-circle:not(:first-child) {
+    transform: translateX(50px);
+  }
+  
+  /* Middle circle hover effects - push first left, last right */
+  .news-circles-container:has(.news-circle:nth-child(2):hover) .news-circle:first-child {
+    transform: translateX(-50px);
+  }
+  
+  .news-circles-container:has(.news-circle:nth-child(2):hover) .news-circle:last-child {
+    transform: translateX(50px);
+  }
+  
+  /* Last circle hover effects - push others left */
+  .news-circles-container:has(.news-circle:last-child:hover) .news-circle:not(:last-child) {
+    transform: translateX(-50px);
+  }
+/* Style for the discover text container */
+.discover-text-container {
+    width: 100%;
+    text-align: center;
+    padding-top: 55px; /* 55px spacing below the hero image */
+    max-width: 100%px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Add padding equal to the desired edge margin */
+    padding-right: 0px; /* Add padding equal to the desired edge margin */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Style for the heading */
+.discover-heading {
+    font-family: 'FZ Poppins', sans-serif;
+    font-weight: 510; /* semibold */
+    font-size: 27px;
+    color: #D9D9D9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 35px 0; /* Added 35px bottom margin to create space */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+ /* Create horizontal lines using pseudo-elements */
+ .discover-heading::before,
+.discover-heading::after {
+    content: "";
+    height: 1px; /* 2px thick line */
+    background-color: #D9D9D9; /* Same color as text */
+    display: block;
+    flex: 1; /* Takes up available space */
+    margin: 0 35px; /* 35px gap between line and heading */
+}
+
+
+/* Style for the description paragraph */
+.discover-description {
+    font-size: 20px;
+    color: #D9D9D9;
+    font-weight: 100; /* semibold */
+    line-height: 1.5;
+    margin: 0;
+    padding: 0 20px; /* Add some padding for mobile screens */
+    max-width: 900px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the text block */
+}
+
+/* Ensure proper spacing between sections */
+.main-content {
+    margin-top: 0px; /* Add some space after the text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .discover-description {
+        font-size: 18px; /* Smaller font on mobile */
+    }
+}

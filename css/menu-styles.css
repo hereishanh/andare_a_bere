@@ -1,0 +1,808 @@
+/* Move abbcrew.png down to align with honey.jpg */
+#footer-image-1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: relative;
+    top: 80px; /* Adjust this value as needed to align properly */
+}
+h2.discover-heading,
+h2.appetite-heading,
+h2.maincourse-heading,
+h2.dessert-heading {
+    font-weight: 700;  /* Makes text bold */
+}
+
+/* Footer headings if needed */
+.html-content h2.centered-text {
+    font-weight: 700;
+}
+/* Or adjust the container */
+.fe-block.logo-block {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Make sure the image container takes full height */
+.footer-image-container {
+    height: 100%;
+}
+
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    height: 665px;
+    margin-top: 175px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+    .hero-image-container {
+        height: 500px;
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero-image-container {
+        height: 400px;
+        margin-top: 120px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-image-container {
+        height: 300px;
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-image-container {
+        height: 250px;
+        margin-top: 80px;
+    }
+}
+/* Style for the discover text container */
+.discover-text-container {
+    width: 100%;
+    text-align: center;
+    padding-top: 55px; /* 55px spacing below the hero image */
+    max-width: 100%px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the container */
+    padding-left: 0px; /* Add padding equal to the desired edge margin */
+    padding-right: 0px; /* Add padding equal to the desired edge margin */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Style for the heading */
+.discover-heading {
+    font-family: 'FZ Poppins', sans-serif;
+    font-weight: 510; /* semibold */
+    font-size: 27px;
+    color: #D9D9D9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 35px 0; /* Added 35px bottom margin to create space */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+/* Create horizontal lines using pseudo-elements */
+.discover-heading::before,
+.discover-heading::after {
+    content: "";
+    height: 1px; /* 2px thick line */
+    background-color: #D9D9D9; /* Same color as text */
+    display: block;
+    flex: 1; /* Takes up available space */
+    margin: 0 35px; /* 35px gap between line and heading */
+}
+
+
+/* Style for the description paragraph */
+.discover-description {
+    font-size: 20px;
+    color: #D9D9D9;
+    font-weight: 100; /* semibold */
+    line-height: 1.5;
+    margin: 0;
+    padding: 0 20px; /* Add some padding for mobile screens */
+    max-width: 900px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the text block */
+}
+
+/* Ensure proper spacing between sections */
+.main-content {
+    margin-top: 50px; /* Add some space after the text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .discover-description {
+        font-size: 18px; /* Smaller font on mobile */
+    }
+}
+
+/* Gallery Container - Clips the overflow */
+.gallery-container {
+    width: 100%;
+    height: 572px;
+    overflow: hidden;
+    position: relative;
+    background-color: #121315; /* Match site background */
+}
+
+/* Gallery Track - The sliding element */
+.gallery-track {
+    display: flex;
+    position: absolute;
+    right: 0; /* Start from right edge */
+    gap: 35px; /* Space between images exactly 35px */
+    animation: slideGallery 50s linear infinite; /* Slower animation as requested */
+    will-change: transform; /* Performance optimization */
+}
+
+/* Pause animation on hover */
+.gallery-container:hover .gallery-track {
+    animation-play-state: paused;
+}
+
+/* Gallery Images */
+.gallery-image {
+    width: 781px; /* Exact width as specified */
+    height: 572px; /* Exact height as specified */
+    object-fit: cover;
+    flex-shrink: 0; /* Prevent images from shrinking */
+    transition: transform 0.3s ease, z-index 0.1s; /* Smooth transition for zoom effect */
+    cursor: pointer;
+}
+
+/* Zoom effect on hover */
+.gallery-image:hover {
+    transform: scale(1.1); /* Enlarge to 110% */
+    z-index: 10; /* Bring hovered image to front */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Optional: add shadow for better visual effect */
+}
+
+/* Sliding Animation */
+@keyframes slideGallery {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(4080px); /* Move exactly (781+35)*5 pixels */
+    }
+    50.01% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(4080px);
+    }
+}
+
+        /* Style for the discover text container */
+        .discover-text-container {
+            width: 100%;
+            text-align: center;
+            padding-top: 55px; /* 55px spacing below the hero image */
+            max-width: 100%px; /* Limit the width for better readability */
+            margin: 0 auto; /* Center the container */
+            padding-left: 0px; /* Add padding equal to the desired edge margin */
+            padding-right: 0px; /* Add padding equal to the desired edge margin */
+            box-sizing: border-box; /* Ensure padding is included in width */
+        }
+        
+        /* Style for the heading */
+        .discover-heading {
+            font-family: 'FZ Poppins', sans-serif;
+            font-weight: 510; /* semibold */
+            font-size: 27px;
+            color: #D9D9D9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 0 35px 0; /* Added 35px bottom margin to create space */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        /* Create horizontal lines using pseudo-elements */
+        .discover-heading::before,
+        .discover-heading::after {
+            content: "";
+            height: 1px; /* 2px thick line */
+            background-color: #D9D9D9; /* Same color as text */
+            display: block;
+            flex: 1; /* Takes up available space */
+            margin: 0 35px; /* 35px gap between line and heading */
+        }
+        
+        
+        /* Style for the description paragraph */
+        .discover-description {
+            font-size: 15px;
+            color: #D9D9D9;
+            font-weight: 100; /* semibold */
+            line-height: 1.5;
+            margin: 0;
+            padding: 0 20px; /* Add some padding for mobile screens */
+            max-width: 800px; /* Limit width for better readability */
+            margin: 0 auto; /* Center the text block */
+        }
+        
+        /* Ensure proper spacing between sections */
+        .main-content {
+            margin-top: 50px; /* Add some space after the text */
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .discover-description {
+                font-size: 18px; /* Smaller font on mobile */
+            }
+        }
+        .hero-image-container-2 {
+            position: relative;
+            width: 100%;
+            height: 665px;
+            overflow: hidden;
+        }
+        
+        /* Use the same responsive styling as the first hero image */
+        @media screen and (max-width: 1200px) {
+            .hero-image-container-2 {
+                height: 500px;
+            }
+        }
+        
+        @media screen and (max-width: 992px) {
+            .hero-image-container-2 {
+                height: 400px;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .hero-image-container-2 {
+                height: 300px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .hero-image-container-2 {
+                height: 250px;
+            }
+        }
+
+        /* Style for the discover text container */
+        .discover-text-container {
+            width: 100%;
+            text-align: center;
+            padding-top: 55px; /* 55px spacing below the hero image */
+            max-width: 100%px; /* Limit the width for better readability */
+            margin: 0 auto; /* Center the container */
+            padding-left: 0px; /* Add padding equal to the desired edge margin */
+            padding-right: 0px; /* Add padding equal to the desired edge margin */
+            box-sizing: border-box; /* Ensure padding is included in width */
+        }
+        
+        /* Style for the heading */
+        .discover-heading {
+            font-family: 'FZ Poppins', sans-serif;
+            font-weight: 510; /* semibold */
+            font-size: 27px;
+            color: #D9D9D9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 0 35px 0; /* Added 35px bottom margin to create space */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        /* Create horizontal lines using pseudo-elements */
+        .discover-heading::before,
+        .discover-heading::after {
+            content: "";
+            height: 1px; /* 2px thick line */
+            background-color: #D9D9D9; /* Same color as text */
+            display: block;
+            flex: 1; /* Takes up available space */
+            margin: 0 35px; /* 35px gap between line and heading */
+        }
+        
+        
+        /* Style for the description paragraph */
+        .discover-description {
+            font-size: 15px;
+            color: #D9D9D9;
+            font-weight: 100; /* semibold */
+            line-height: 1.5;
+            margin: 0;
+            padding: 0 20px; /* Add some padding for mobile screens */
+            max-width: 800px; /* Limit width for better readability */
+            margin: 0 auto; /* Center the text block */
+        }
+        
+        /* Ensure proper spacing between sections */
+        .main-content {
+            margin-top: 50px; /* Add some space after the text */
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .discover-description {
+                font-size: 18px; /* Smaller font on mobile */
+            }
+        }
+/* APPETITE Section Styling */
+.appetite-container {
+    width: 100%;
+    padding: 0 35px;
+    box-sizing: border-box;
+}
+
+/* Style for the APPETITE heading */
+.appetite-heading {
+    font-family: 'FZ Poppins', sans-serif;
+    font-weight: 510; /* semibold as requested */
+    font-size: 27px;
+    color: #D9D9D9;
+    text-transform: uppercase;
+    text-align: left; /* Left aligned as requested */
+    margin: 0 0 35px 0; /* 35px spacing below heading */
+}
+
+/* Gallery for khaivi images */
+.khaivi-gallery {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    gap: 35px; /* Equal spacing between images */
+}
+
+/* Individual image containers */
+.khaivi-image-container {
+    flex: 1;
+    max-width: 440px; /* Exact width as specified */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all content */
+}
+
+/* Image styling */
+.khaivi-image {
+    width: 100%;
+    height: 397px; /* Exact height as specified - 397px */
+    object-fit: cover;
+    display: block;
+}
+
+/* Details section below each image */
+.khaivi-details {
+    padding-top: 55px; /* 55px below the image */
+    text-align: center; /* Center align the text */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+}
+
+/* Title styling */
+.khaivi-title {
+    font-family: 'FZ Poppins', sans-serif;
+    font-weight: 510;
+    font-size: 27px;
+    color: #D9D9D9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Description styling */
+.khaivi-description {
+    font-family: 'FZ Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: #D9D9D9;
+    margin: 30px 0; /* Changed from 35px to 30px as requested */
+    padding: 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Price styling */
+.khaivi-price {
+    font-family: 'FZ Poppins', sans-serif;
+    font-weight: 510;
+    font-size: 27px;
+    color: #D9D9D9;
+    margin: 0 0 15px 0; /* Changed to 15px bottom margin as requested */
+    padding: 0;
+    text-align: center;
+}
+
+/* Price underline */
+.price-underline {
+    height: 1px;
+    background-color: #D9D9D9;
+    width: 100%; /* Will be adjusted by JavaScript to match price width */
+    margin: 0 auto; /* Center the underline */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1360px) {
+    .khaivi-gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .khaivi-image-container {
+        flex: 0 0 calc(50% - 17.5px);
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .khaivi-image-container {
+        flex: 0 0 100%;
+    }
+    
+    .appetite-heading {
+        text-align: center;
+    }
+}
+/* Image styling with hover effect */
+.khaivi-image {
+    width: 100%;
+    height: 397px; /* Exact height as specified - 397px */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; /* Added smooth transition */
+}
+
+/* Image hover effect */
+.khaivi-image-container:hover .khaivi-image {
+    transform: scale(1.1); /* Enlarge to 110% */
+}
+
+/* Details section with hover effect */
+.khaivi-details {
+    padding-top: 55px; /* 55px below the image */
+    text-align: center; /* Center align the text */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    transition: transform 0.3s ease; /* Added smooth transition */
+}
+
+/* Text section hover effect */
+.khaivi-details:hover {
+    transform: scale(1.1); /* Enlarge all text to 110% */
+}
+/* MAINCOURSE Section Styling - Matched to APPETITE styling */
+.maincourse-container {
+    width: 100%;
+    padding: 0 35px;
+    box-sizing: border-box;
+}
+
+/* Style for the MAINCOURSE heading */
+.maincourse-heading {
+    font-family: 'FZ Poppins', sans-serif;
+    font-weight: 510; /* semibold as requested */
+    font-size: 27px;
+    color: #D9D9D9;
+    text-transform: uppercase;
+    text-align: left; /* Left aligned as requested */
+    margin: 0 0 35px 0; /* 35px spacing below heading */
+}
+
+/* Gallery for monchinh images */
+.monchinh-gallery {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    gap: 35px; /* Equal spacing between images */
+}
+
+/* Individual image containers */
+.monchinh-image-container {
+    flex: 1;
+    max-width: 440px; /* Exact width as specified */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all content */
+}
+
+/* Image styling */
+.monchinh-image {
+    width: 100%;
+    height: 397px; /* Exact height as specified - 397px */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; /* Added smooth transition */
+}
+
+/* Image hover effect */
+.monchinh-image-container:hover .monchinh-image {
+    transform: scale(1.1); /* Enlarge to 110% */
+}
+
+/* Details section below each image */
+.monchinh-details {
+    padding-top: 55px; /* 55px below the image */
+    text-align: center; /* Center align the text */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    transition: transform 0.3s ease; /* Added smooth transition */
+}
+
+/* Text section hover effect */
+.monchinh-details:hover {
+    transform: scale(1.1); /* Enlarge all text to 110% */
+}
+
+/* Title styling */
+.monchinh-title {
+    font-family: 'FZ Poppins', sans-serif;
+    font-weight: 510;
+    font-size: 27px;
+    color: #D9D9D9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Description styling */
+.monchinh-description {
+font-family: 'FZ Poppins', sans-serif;
+font-weight: 100;
+font-size: 20px;
+color: #D9D9D9;
+margin: 30px auto; /* 30px spacing above and below, auto for horizontal centering */
+padding: 0 30px; /* Add 30px padding on each side */
+line-height: 1.5;
+text-align: center;
+max-width: calc(100% - 30px); /* Reduce width by 60px total (30px on each side) */
+box-sizing: border-box;
+}
+
+/* Price styling */
+.monchinh-price {
+    font-family: 'FZ Poppins', sans-serif;
+    font-weight: 510;
+    font-size: 27px;
+    color: #D9D9D9;
+    margin: 0 0 15px 0; /* 15px bottom margin */
+    padding: 0;
+    text-align: center;
+}
+
+/* Price underline */
+.price-underline-main {
+    height: 1px;
+    background-color: #D9D9D9;
+    width: 100%; /* Will be adjusted by JavaScript */
+    margin: 0 auto; /* Center the underline */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1360px) {
+    .monchinh-gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .monchinh-image-container {
+        flex: 0 0 calc(50% - 17.5px);
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .monchinh-image-container {
+        flex: 0 0 100%;
+    }
+    
+    .maincourse-heading {
+        text-align: center;
+    }
+}
+/* DESSERT Section Styling - Matched to APPETITE styling */
+.dessert-container {
+    width: 100%;
+    padding: 0 35px;
+    box-sizing: border-box;
+}
+
+/* Style for the DESSERT heading */
+.dessert-heading {
+    font-family: 'FZ Poppins', sans-serif;
+    font-weight: 510; /* semibold as requested */
+    font-size: 27px;
+    color: #D9D9D9;
+    text-transform: uppercase;
+    text-align: left; /* Left aligned as requested */
+    margin: 0 0 35px 0; /* 35px spacing below heading */
+}
+
+/* Gallery for trangmieng images */
+.trangmieng-gallery {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    gap: 35px; /* Equal spacing between images */
+}
+
+/* Individual image containers */
+.trangmieng-image-container {
+    flex: 1;
+    max-width: 440px; /* Exact width as specified */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all content */
+}
+
+/* Image styling */
+.trangmieng-image {
+    width: 100%;
+    height: 397px; /* Exact height as specified - 397px */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; /* Added smooth transition */
+}
+
+/* Image hover effect */
+.trangmieng-image-container:hover .trangmieng-image {
+    transform: scale(1.1); /* Enlarge to 110% */
+}
+
+/* Details section below each image */
+.trangmieng-details {
+    padding-top: 55px; /* 55px below the image */
+    text-align: center; /* Center align the text */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    transition: transform 0.3s ease; /* Added smooth transition */
+}
+
+/* Text section hover effect */
+.trangmieng-details:hover {
+    transform: scale(1.1); /* Enlarge all text to 110% */
+}
+
+/* Title styling */
+.trangmieng-title {
+    font-family: 'FZ Poppins', sans-serif;
+    font-weight: 510;
+    font-size: 27px;
+    color: #D9D9D9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Description styling */
+.trangmieng-description {
+    font-family: 'FZ Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: #D9D9D9;
+    margin: 30px auto; /* 30px spacing above and below, auto for horizontal centering */
+    padding: 0 30px; /* Add 30px padding on each side */
+    line-height: 1.5;
+    text-align: center;
+    max-width: calc(100% - 0px); /* Reduce width by 60px total (30px on each side) */
+    box-sizing: border-box;
+}
+
+/* Price styling */
+.trangmieng-price {
+    font-family: 'FZ Poppins', sans-serif;
+    font-weight: 510;
+    font-size: 27px;
+    color: #D9D9D9;
+    margin: 0 0 15px 0; /* 15px bottom margin */
+    padding: 0;
+    text-align: center;
+}
+
+/* Price underline */
+.price-underline-dessert {
+    height: 1px;
+    background-color: #D9D9D9;
+    width: 100%; /* Will be adjusted by JavaScript */
+    margin: 0 auto; /* Center the underline */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1360px) {
+    .trangmieng-gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .trangmieng-image-container {
+        flex: 0 0 calc(50% - 17.5px);
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .trangmieng-image-container {
+        flex: 0 0 100%;
+    }
+    
+    .dessert-heading {
+        text-align: center;
+    }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 665px;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevents any interaction */
+}
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+    .video-container {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .video-container {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-container {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video-container {
+        height: 250px;
+    }
+}

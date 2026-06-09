@@ -1,0 +1,270 @@
+
+.main-content {
+    font-family: "FZ Poppins",sans-serif;
+    padding: 100px 0 60px; /* Increased top padding to separate from header */
+    background-color: #121212;
+}
+
+.restaurant-section {
+    font-family: "FZ Poppins",sans-serif;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    background-color: #1e1e1e;
+    /* Add opacity and transform for transition */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Class to add when the section comes into view */
+.restaurant-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.restaurant-section:last-child {
+    margin-bottom: 0;
+}
+
+.restaurant-info,
+.restaurant-map {
+    flex: 1;
+    padding: 40px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.restaurant-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.restaurant-name {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: 200;
+    /* Add transition for restaurant name */
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s;
+}
+
+.restaurant-section.visible .restaurant-name {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.restaurant-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #cccccc;
+    /* Add transition for description */
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
+}
+
+.restaurant-section.visible .restaurant-description {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.restaurant-details {
+    margin-bottom: 25px;
+    width: 100%;
+    /* Add transition for details */
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease 0.4s, transform 0.6s ease 0.4s;
+}
+
+.restaurant-section.visible .restaurant-details {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Modified detail-row to use a grid layout */
+.detail-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    margin-bottom: 10px;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #ffffff;
+    padding-right: 10px;
+}
+
+.detail-value {
+    color: #cccccc;
+}
+
+.restaurant-cta {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    /* Add transition for CTA button */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease 0.5s, transform 0.6s ease 0.5s, background-color 0.3s, color 0.3s;
+}
+
+.restaurant-section.visible .restaurant-cta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.restaurant-cta:hover {
+    background-color: #ffffff;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.restaurant-map {
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Add transition for map */
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.8s ease 0.3s, transform 0.8s ease 0.3s;
+}
+
+.restaurant-section.visible .restaurant-map {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #aaaaaa;
+}
+
+.map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 60px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Restaurant divider styles with transitions */
+.restaurant-divider {
+    position: relative;
+    max-width: 700px;
+    margin: 80px auto;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.restaurant-divider.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.divider-line {
+    display: block;
+    height: 2px;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+    position: relative;
+}
+
+.divider-text {
+    position: relative;
+    top: -20px;
+    background-color: #121212;
+    padding: 0 30px;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 200;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* Improved responsive styles */
+@media (max-width: 900px) {
+    .restaurant-section {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    
+    .restaurant-info,
+    .restaurant-map {
+        width: 100%;
+        padding: 30px;
+    }
+    
+    .restaurant-map {
+        min-height: 300px;
+    }
+    
+    .restaurant-divider {
+        margin: 60px auto;
+    }
+    
+    /* Maintain grid layout on smaller screens */
+    .detail-row {
+        grid-template-columns: 100px 1fr;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .detail-row {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        margin-bottom: 15px;
+    }
+    
+    .detail-label {
+        margin-bottom: 2px;
+    }
+}
+/* Custom styling for social icons with images */
+.social-icon {
+background-color: #121315; /* Keep original dark background */
+}
+
+/* Image inside social icon */
+.social-icon-image {
+width: 50%; /* Make image take up 50% of circle size */
+height: 50%;
+object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Ensure icon container and image move together */
+.social-icon:hover .social-icon-image {
+/* No color change, just move with the parent */
+transform: none;
+}
