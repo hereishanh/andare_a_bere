@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Andare A Bere</title>
+    <link rel="stylesheet" href="css/font-styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/header-styles.css">
+    <link rel="stylesheet" href="css/footer-styles.css">
+    <script src="js/header-script.js"></script>
+    <script src="js/footer-script.js"></script>
+
+    <link rel="stylesheet" href="css/menu-styles.css">
+    <script src="js/menu-script.js"></script>
+    
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <!-- Top row -->
+            <div class="header__top">
+                <div class="header__contact">
+                    <div class="header__contact-info">
+                        <div class="header__contact-group">
+                            <span class="header__contact-title">Telephone</span>
+                            <a href="tel:+842436591158" class="header__contact-link">+84 123456789</a>
+                        </div>
+                        <div class="header__contact-group">
+                            <span class="header__contact-title">Email</span>
+                            <a href="mailto:andereabere@gmail.com" class="header__contact-link">andereabere@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header__logo">
+                    <a href="/" class="header__logo-link">
+                        <img src="assets/logo.svg" alt="Andare A Bere" class="header__logo-image">
+                    </a>
+                </div>
+
+                <div class="header__actions">
+                    <a href="reservation.html" class="header__btn header__btn--reservation">
+                        <span class="header__btn-text">RESERVATIONS</span>
+                    </a>
+                    <a href="login.html" class="header__btn header__btn--login">
+                        <span class="header__btn-text">LOGIN/REGISTER</span>
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Bottom row - Navigation -->
+            <nav class="header__nav">
+                <ul class="main-nav">
+                    <li class="main-nav__item">
+                        <a href="index.html" class="main-nav__link">HOME</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="about_us.html" class="main-nav__link">ABOUT US</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="menu.html" class="main-nav__link">MENU</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="our_restaurant.html" class="main-nav__link">OUR RESTAURANTS</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="news.html" class="main-nav__link">NEWS</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="FAQ.html" class="main-nav__link">FAQ</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="careers.html" class="main-nav__link">CAREERS</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="termsofservices.html" class="main-nav__link">TERMS OF SERVICES</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <!-- Mobile menu button (hidden on desktop) -->
+            <button class="header__mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+            <!-- Mobile navigation (hidden by default) -->
+    <div class="mobile-nav">
+        <div class="mobile-nav__container">
+            <button class="mobile-nav__close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="mobile-nav__logo">
+                <img src="assets/logo.svg" alt="Andare A Bere">
+            </div>
+            <ul class="mobile-nav__menu">
+                <li class="mobile-nav__item">
+                    <a href="index.html" class="mobile-nav__link">HOME</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="about_us.html" class="mobile-nav__link">ABOUT US</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="our_restaurant.html" class="mobile-nav__link">OUR RESTAURANTS</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="news.html" class="mobile-nav__link">NEWS</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="FAQ.html" class="mobile-nav__link">FAQ</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="careers.html" class="mobile-nav__link">CAREERS</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="termsofservices.html" class="mobile-nav__link">TERMS OF SERVICES</a>
+                </li>
+            </ul>
+            <div class="mobile-nav__footer">
+                <div class="mobile-nav__contact">
+                    <div class="mobile-nav__contact-item">
+                        <span class="mobile-nav__contact-title">Telephone</span>
+                        <a href="tel:+842436591158" class="mobile-nav_contact-link">+84 123456789</a>
+                    </div>
+                    <div class="mobile-nav__contact-item">
+                        <span class="mobile-nav__contact-title">Email</span>
+                        <a href="mailto:andereabere@gmail.com" class="mobile-nav__contact-link">andereabere@gmail.com</a>
+                    </div>
+                </div>
+                <div class="mobile-nav__actions">
+                    <a href="reservation.html" class="mobile-nav__btn mobile-nav__btn--reservation">Reservations</a>
+                    <a href="login.html" class="mobile-nav__btn mobile-nav__btn--login">Login / Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+
+
+
+    <!-- Main content placeholder (to show scroll effect) -->
+    <main class="main-content">
+    <div class="hero-image-container">
+        <img src="images/menu-hero1.jpg" alt="Menu Hero Image" class="hero-image">
+    </div>
+
+    <!-- Add the new text section with proper spacing -->
+    <div class="discover-text-container">
+        <h2 class="discover-heading">DISCOVER A CULINARY JOURNEY</h2>
+        <p class="discover-description">"Andare a Bere is a luxurious fine dining restaurant in Hanoi, where culinary quintessence is perfectly paired with premium wines. We pay attention to every detail, from premium ingredients to sophisticated preparation techniques, bringing delicate and balanced flavors. The elegant space and attentive service create the perfect atmosphere for memorable evenings, whether it is a private party or a special occasion."</p>
+    </div>
+    
+    <!-- Add 55px margin after description -->
+    <div style="height: 55px;"></div>
+
+    <div class="gallery-container">
+        <div class="gallery-track">
+            <!-- Original images -->
+            <img src="images/menu-gal1.webp" alt="Gallery Image 1" class="gallery-image">
+            <img src="images/menu-gal2.webp" alt="Gallery Image 2" class="gallery-image">
+            <img src="images/menu-gal3.webp" alt="Gallery Image 3" class="gallery-image">
+            <img src="images/menu-gal4.webp" alt="Gallery Image 4" class="gallery-image">
+            <img src="images/menu-gal5.webp" alt="Gallery Image 5" class="gallery-image">
+            <!-- Duplicate set for seamless looping -->
+            <img src="images/menu-gal1.webp" alt="Gallery Image 1" class="gallery-image">
+            <img src="images/menu-gal2.webp" alt="Gallery Image 2" class="gallery-image">
+            <img src="images/menu-gal3.webp" alt="Gallery Image 3" class="gallery-image">
+            <img src="images/menu-gal4.webp" alt="Gallery Image 4" class="gallery-image">
+            <img src="images/menu-gal5.webp" alt="Gallery Image 5" class="gallery-image">
+        </div>
+    </div>
+
+    <div class="discover-text-container">
+        <h2 class="discover-heading">THE FIRE</h2>
+        <p class="discover-description">"Something so simple but so essential, so basic but so inspirational. We need to learn, generates heat and understand the temperature to master the fire. That’s how Esta want to bring this to the guests of Esta."</p>
+    </div>
+
+    <!-- Second Hero Image -->
+    <div style="height: 55px;"></div>
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/u-fNqxkPn1I?autoplay=1&mute=1&loop=1&playlist=u-fNqxkPn1I&controls=0&rel=0&showinfo=0&modestbranding=1&iv_load_policy=3&disablekb=1" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="discover-text-container">
+        <h2 class="discover-heading">THE MENU</h2>
+        <p class="discover-description">A new season, a new taste</p>
+        <p class="discover-description">Our spring-summer menu has arrived with fresh, vibrant, and full of seasonal flavors</p>
+        <br>
+        <p class="discover-description">Explore our latest creations, now available in both set menu & à la carte</p>
+        </br>
+    </div>
+
+    <!-- APPETITE Section -->
+    <div style="height: 55px;"></div>
+
+    <div class="appetite-container">
+        <h2 class="appetite-heading">APPETITE</h2>
+        
+        <div class="khaivi-gallery">
+            <!-- First item: TOMATO BASIL SOUP -->
+            <div class="khaivi-image-container">
+                <img src="images/menu-khaivi1.webp" alt="Khai Vi 1" class="khaivi-image">
+                <div class="khaivi-details">
+                    <h3 class="khaivi-title">TOMATO BASIL SOUP</h3>
+                    <p class="khaivi-description">Basil, fresh cream, served with toast</p>
+                    <h4 class="khaivi-price">PRICE: 120.000 VND</h4>
+                    <div class="price-underline"></div>
+                </div>
+            </div>
+            
+            <!-- Second item: FRESH FRENCH OYSTER -->
+            <div class="khaivi-image-container">
+                <img src="images/menu-khaivi2.webp" alt="Khai Vi 2" class="khaivi-image">
+                <div class="khaivi-details">
+                    <h3 class="khaivi-title">FRESH FRENCH OYSTER</h3>
+                    <p class="khaivi-description">Ponzu sauce, lemon</p>
+                    <h4 class="khaivi-price">PRICE: 280.000 VND</h4>
+                    <div class="price-underline"></div>
+                </div>
+            </div>
+            
+            <!-- Third item: RARE GRILLED SALMON -->
+            <div class="khaivi-image-container">
+                <img src="images/menu-khaivi3.webp" alt="Khai Vi 3" class="khaivi-image">
+                <div class="khaivi-details">
+                    <h3 class="khaivi-title">RARE GRILLED SALMON</h3>
+                    <p class="khaivi-description">Sesame, mango chutney, wasabi mayonnaise</p>
+                    <h4 class="khaivi-price">PRICE: 330.000 VND</h4>
+                    <div class="price-underline"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add 110px spacing after the APPETITE section -->
+    <div style="height: 110px;"></div>
+
+    <!-- MAINCOURSE Section -->
+    <div class="maincourse-container">
+        <h2 class="maincourse-heading">MAINCOURSE</h2>
+        
+        <div class="monchinh-gallery">
+            <!-- First item: GRILLED WAGYU BEEF -->
+            <div class="monchinh-image-container">
+                <img src="images/menu-monchinh1.webp" alt="Mon Chinh 1" class="monchinh-image">
+                <div class="monchinh-details">
+                    <h3 class="monchinh-title">GRILLED WAGYU BEEF</h3>
+                    <p class="monchinh-description">Mashed Potatoes and Grilled Vegetables, Chimichurri Sauce</p>
+                    <h4 class="monchinh-price">PRICE: 2.200.000 VND</h4>
+                    <div class="price-underline-main"></div>
+                </div>
+            </div>
+            
+            <!-- Second item: PAN-FRIED MURRAY COD -->
+            <div class="monchinh-image-container">
+                <img src="images/menu-monchinh2.webp" alt="Mon Chinh 2" class="monchinh-image">
+                <div class="monchinh-details">
+                    <h3 class="monchinh-title">PAN-FRIED MURRAY COD</h3>
+                    <p class="monchinh-description">Roasted Broccoli, Creamy Garlic potatoes, Cape Malay Curry Sauce</p>
+                    <h4 class="monchinh-price">PRICE: 1.200.000 VND</h4>
+                    <div class="price-underline-main"></div>
+                </div>
+            </div>
+            
+            <!-- Third item: GRILLED AUSTRALIAN LAMB -->
+            <div class="monchinh-image-container">
+                <img src="images/menu-monchinh3.webp" alt="Mon Chinh 3" class="monchinh-image">
+                <div class="monchinh-details">
+                    <h3 class="monchinh-title">GRILLED AUSTRALIAN LAMB</h3>
+                    <p class="monchinh-description">Herbs, Fondant Potatoes, Romesco Sauce, Red Wine Sauce</p>
+                    <h4 class="monchinh-price">PRICE: 1.800.000 VND</h4>
+                    <div class="price-underline-main"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add 110px spacing after the MAINCOURSE section -->
+    <div style="height: 110px;"></div>
+
+    <!-- DESSERT Section -->
+    <div class="dessert-container">
+        <h2 class="dessert-heading">DESSERT</h2>
+        
+        <div class="trangmieng-gallery">
+            <!-- First item: TIRAMISU CLASSICO -->
+            <div class="trangmieng-image-container">
+                <img src="images/menu-trangmieng1.jpg" alt="Trang Mieng 1" class="trangmieng-image">
+                <div class="trangmieng-details">
+                    <h3 class="trangmieng-title">TIRAMISU CLASSICO</h3>
+                    <p class="trangmieng-description">Soft sponge cake with mascarpone</p>
+                    <h4 class="trangmieng-price">PRICE: 190.000 VND</h4>
+                    <div class="price-underline-dessert"></div>
+                </div>
+            </div>
+            
+            <!-- Second item: DARK CHOCOLATE CHERRY CAKE -->
+            <div class="trangmieng-image-container">
+                <img src="images/menu-trangmieng2.jpg" alt="Trang Mieng 2" class="trangmieng-image">
+                <div class="trangmieng-details">
+                    <h3 class="trangmieng-title">CHOCOLATE CHERRY CAKE</h3>
+                    <p class="trangmieng-description">Hazelnuts, chocolate mousse, cherry</p>
+                    <h4 class="trangmieng-price">PRICE: 230.000 VND</h4>
+                    <div class="price-underline-dessert"></div>
+                </div>
+            </div>
+            
+            <!-- Third item: EXOTIC RAVIOLI -->
+            <div class="trangmieng-image-container">
+                <img src="images/menu-trangmieng3.jpg" alt="Trang Mieng 3" class="trangmieng-image">
+                <div class="trangmieng-details">
+                    <h3 class="trangmieng-title">EXOTIC RAVIOLI</h3>
+                    <p class="trangmieng-description">Coconut panna cotta, mango sorbet</p>
+                    <h4 class="trangmieng-price">PRICE: 230.000 VND</h4>
+                    <div class="price-underline-dessert"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 50px;"></div>
+    </main>
+
+
+
+    <footer>
+        <!-- Footer Section 1: Contact Information (Black Background) -->
+    <section class="page-section background-black">
+    <div class="section-background">
+        <div class="section-background-overlay"></div>
+    </div>
+    <div class="content-wrapper">
+        <div class="content">
+            <div class="fluid-engine">
+                <!-- Logo Column -->
+                <div class="fe-block logo-block">
+                    <div class="image-wrapper">
+                        <!-- This is where you would add your first footer image -->
+                        <div id="footer-image-1" class="footer-image-container">
+                            <img src="images/crew-footer.webp" alt="Andare A Bere">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Small Logo (mobile/decoration) -->
+            
+                
+                <!-- Contact Information Block -->
+                <div class="fe-block contact-info-block">
+                    <div class="fe-block small-logo-block">
+                        <div class="image-wrapper">
+                            <!-- This is a decorative logo element -->
+                            <div class="small-logo-container">
+                                <img src="assets\logo.svg" alt="Logo Icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="html-content">
+                        <p class="centered-text">207 Giai Phong, Dong Tam Ward<br>Hai Ba Trung District, Ha Noi, Vietnam</p>
+                        <p class="centered-text"><strong>Opening Hours</strong><br>18:00 - 23:00<br>Monday to Saturday</p>
+                        <p class="centered-text"><strong>Email</strong><br>andereabere@gmail.com</p>
+                        <p class="centered-text"><strong>Hotline</strong><br>+84 123456789</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    <!-- Footer Section 2: Work with us & Social Media (Light Background with Image) -->
+    <section class="page-section background-light">
+    <div class="section-background">
+        <!-- This is where your second background image would go -->
+        <img src="images\bg-footer.webp" alt="Background Image" id="footer-image-2" class="section-background-image">
+        <div class="section-background-overlay"></div>
+    </div>
+    <div class="content-wrapper">
+        <div class="content">
+            <div class="fluid-engine">
+                <!-- Work With Us Column -->
+                <div class="fe-block work-with-us-block">
+                    <div class="html-content">
+                        <h2 class="centered-text"><strong>WORK WITH US</strong></h2>
+                        <p class="centered-text">We welcome for talented and ambitious member who have a passion for cooking and a hear to learning. Join us on this exciting journey and become a part of the Andare A Bere family.</p>
+                        <p class="centered-text">For job applications: andereabere@gmail.com</p>
+                    </div>
+                </div>
+                
+                <!-- Social Media Title -->
+                <div class="fe-block social-title-block">
+                    <div class="html-content">
+                        <h2 class="centered-text"><strong>KEEP IN TOUCH</strong></h2>
+                    </div>
+                </div>
+                
+                <!-- Social Media Icons -->
+                <div class="fe-block social-icons-block">
+                    <div class="social-icons-wrapper">
+                        <nav class="social-icons-list">
+                            <a href="https://www.facebook.com/hereishuyanh.tran/" target="_blank" class="social-icon facebook" aria-label="Facebook">
+                                <img src="images\facebook-icon.webp" alt="Facebook" class="social-icon-image">
+                            </a>
+                            <a href="https://www.instagram.com/Hereishanh" target="_blank" class="social-icon instagram" aria-label="Instagram">
+                                <img src="images\ins-icon.webp" alt="Instagram" class="social-icon-image">
+                            </a>
+                            <a href="mailto:andereabere@gmail.com" target="_blank" class="social-icon email" aria-label="Email">
+                                <img src="images\mail-icon.webp" alt="Email" class="social-icon-image">
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-block">
+        <p class="copyright-text">Copyright © 2025 Andare A Bere. All Rights Reserved</p>
+    </div>
+    </section>
+    
+    
+    
+    </footer>
+
+</body>
+</html>

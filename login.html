@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/font-styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/header-styles.css">
+    <link rel="stylesheet" href="css/footer-styles.css">
+    <script src="js/header-script.js"></script>
+    <script src="js/footer-script.js"></script>
+    <!-- end of temp -->
+    <link rel="stylesheet" href="css/login-styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <!-- Top row -->
+            <div class="header__top">
+                <div class="header__contact">
+                    <div class="header__contact-info">
+                        <div class="header__contact-group">
+                            <span class="header__contact-title">Telephone</span>
+                            <a href="tel:+842436591158" class="header__contact-link">+84 123456789</a>
+                        </div>
+                        <div class="header__contact-group">
+                            <span class="header__contact-title">Email</span>
+                            <a href="mailto:andereabere@gmail.com" class="header__contact-link">andereabere@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header__logo">
+                    <a href="/" class="header__logo-link">
+                        <img src="assets/logo.svg" alt="Andare A Bere" class="header__logo-image">
+                    </a>
+                </div>
+
+                <div class="header__actions">
+                    <a href="reservation.html" class="header__btn header__btn--reservation">
+                        <span class="header__btn-text">RESERVATIONS</span>
+                    </a>
+                    <a href="login.html" class="header__btn header__btn--login">
+                        <span class="header__btn-text">LOGIN/REGISTER</span>
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Bottom row - Navigation -->
+            <nav class="header__nav">
+                <ul class="main-nav">
+                    <li class="main-nav__item">
+                        <a href="index.html" class="main-nav__link">HOME</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="about_us.html" class="main-nav__link">ABOUT US</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="menu.html" class="main-nav__link">MENU</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="our_restaurant.html" class="main-nav__link">OUR RESTAURANTS</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="news.html" class="main-nav__link">NEWS</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="FAQ.html" class="main-nav__link">FAQ</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="careers.html" class="main-nav__link">CAREERS</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a href="termsofservices.html" class="main-nav__link">TERMS OF SERVICES</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <!-- Mobile menu button (hidden on desktop) -->
+            <button class="header__mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+            <!-- Mobile navigation (hidden by default) -->
+    <div class="mobile-nav">
+        <div class="mobile-nav__container">
+            <button class="mobile-nav__close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="mobile-nav__logo">
+                <img src="assets/logo.svg" alt="Andare A Bere">
+            </div>
+            <ul class="mobile-nav__menu">
+                <li class="mobile-nav__item">
+                    <a href="index.html" class="mobile-nav__link">HOME</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="about_us.html" class="mobile-nav__link">ABOUT US</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="our_restaurant.html" class="mobile-nav__link">OUR RESTAURANTS</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="news.html" class="mobile-nav__link">NEWS</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="FAQ.html" class="mobile-nav__link">FAQ</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="careers.html" class="mobile-nav__link">CAREERS</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="termsofservices.html" class="mobile-nav__link">TERMS OF SERVICES</a>
+                </li>
+            </ul>
+            <div class="mobile-nav__footer">
+                <div class="mobile-nav__contact">
+                    <div class="mobile-nav__contact-item">
+                        <span class="mobile-nav__contact-title">Telephone</span>
+                        <a href="tel:+842436591158" class="mobile-nav_contact-link">+84 123456789</a>
+                    </div>
+                    <div class="mobile-nav__contact-item">
+                        <span class="mobile-nav__contact-title">Email</span>
+                        <a href="mailto:andereabere@gmail.com" class="mobile-nav__contact-link">andereabere@gmail.com</a>
+                    </div>
+                </div>
+                <div class="mobile-nav__actions">
+                    <a href="reservation.html" class="mobile-nav__btn mobile-nav__btn--reservation">Reservations</a>
+                    <a href="login.html" class="mobile-nav__btn mobile-nav__btn--login">Login / Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+
+
+    <main class="main-content">
+    <!-- Page Content - Clear separation from header -->
+    <div class="page-content">
+        <!-- Login Container -->
+        <div class="login-container">
+            <div class="login-box">
+                <h2 class="login-title">WELCOME TO ANDARE A BERE</h2>
+                <form action="index.html" method="post">
+                    <input type="text" class="input-field" placeholder="Username" required>
+                    <input type="password" class="input-field" placeholder="Password" required>
+                    <button type="submit" class="login-button">Login</button>
+                </form>
+                <div class="register-link">
+                    New to Andare A Bere? <a href="login.html">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+    
+</body>
+</html>
